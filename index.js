@@ -2,6 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 const shapes = require("./lib/shapes");
 
+// Array of questions for user input
 const questions = [
   {
     type: "input",
@@ -35,6 +36,7 @@ function writeToFile(data) {
     } 
 )};
 
+// function to create shape based on user input
 function createShape(data) {
     if (data.shape == "circle") {
         return new shapes.Circle(data.text, data.textColor, data.shapeColor);
